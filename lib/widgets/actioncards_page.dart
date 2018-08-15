@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/utils/page_util.dart';
-import 'package:myapp/widgets/actioncards/example_page.dart';
+import 'package:SMTApp/utils/page_util.dart';
+import 'package:SMTApp/widgets/actioncards/example_page.dart';
 
 class ActionCardsPage extends StatefulWidget {
   @override
