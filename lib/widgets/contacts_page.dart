@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/models/contact.dart';
-import 'package:myapp/utils/page_util.dart';
-import 'package:myapp/viewmodels/contact_viewmodel.dart';
+import 'package:SMTApp/models/contact.dart';
+import 'package:SMTApp/utils/page_util.dart';
+import 'package:SMTApp/viewmodels/contact_viewmodel.dart';
 
 class ContactsPage extends StatefulWidget {
   @override
