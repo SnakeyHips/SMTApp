@@ -41,6 +41,13 @@ class ContactsPageState extends State<ContactsPage> {
                   style: new TextStyle(fontSize: 18.0, color: Colors.black),
                   decoration: InputDecoration(
                     prefixIcon: new Icon(Icons.search),
+                    suffixIcon: new GestureDetector(
+                      child: new Icon(Icons.close),
+                      onTap: () {
+                        controller.clear();
+                        FocusScope.of(context).requestFocus(new FocusNode());
+                      },
+                    ),
                     hintText: "Search...",
                   ),
                   controller: controller,
