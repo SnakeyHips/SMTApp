@@ -35,14 +35,16 @@ class ContactsPageState extends State<ContactsPage> {
         child: new Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            new TextField(
-              decoration: InputDecoration(
-                contentPadding: const EdgeInsets.all(16.0),
-                prefixIcon: new Icon(Icons.search),
-                hintText: "Search...",
-              ),
-              controller: controller,
-            ),
+            new Padding(
+                padding: new EdgeInsets.only(top: 8.0, left: 16.0, right: 16.0),
+                child: new TextField(
+                  style: new TextStyle(fontSize: 18.0, color: Colors.black),
+                  decoration: InputDecoration(
+                    prefixIcon: new Icon(Icons.search),
+                    hintText: "Search...",
+                  ),
+                  controller: controller,
+                )),
             new Expanded(
               child: new Padding(
                   padding: new EdgeInsets.only(top: 8.0),
