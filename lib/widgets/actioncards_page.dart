@@ -16,7 +16,8 @@ class ActionCardsPageState extends State<ActionCardsPage> {
   Widget build(BuildContext context) {
     return Material(
       color: Colors.white,
-      child: _buildActionCards(),
+      child: new Padding(
+          padding: new EdgeInsets.only(top: 8.0), child: _buildActionCards()),
     );
   }
 
