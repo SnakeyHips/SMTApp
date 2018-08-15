@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/app.dart';
-import 'package:myapp/viewmodels/contact_viewmodel.dart';
+import 'package:SMTApp/app.dart';
+import 'package:SMTApp/viewmodels/contact_viewmodel.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 void main() async {
