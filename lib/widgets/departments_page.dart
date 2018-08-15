@@ -17,7 +17,8 @@ class DepartmentsPageState extends State<DepartmentsPage> {
   Widget build(BuildContext context) {
     return Material(
       color: Colors.white,
-      child: _buildDepartments(),
+      child: new Padding(
+          padding: new EdgeInsets.only(top: 8.0), child: _buildDepartments()),
     );
   }
 
