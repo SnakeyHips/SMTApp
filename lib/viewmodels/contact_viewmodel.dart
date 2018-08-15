@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:myapp/models/contact.dart';
+import 'package:SMTApp/models/contact.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
