@@ -33,21 +33,23 @@ class ContactsPageState extends State<ContactsPage> {
     return new Material(
         color: Colors.white,
         child: new Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
-        new TextField(
-          decoration: InputDecoration(
-            contentPadding: const EdgeInsets.all(16.0),
-            prefixIcon: new Icon(Icons.search),
-            hintText: "Search...",
-          ),
-          controller: controller,
-        ),
-        new Expanded(
-          child: _buildContacts(),
-        )
-      ],
-    ));
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            new TextField(
+              decoration: InputDecoration(
+                contentPadding: const EdgeInsets.all(16.0),
+                prefixIcon: new Icon(Icons.search),
+                hintText: "Search...",
+              ),
+              controller: controller,
+            ),
+            new Expanded(
+              child: new Padding(
+                  padding: new EdgeInsets.only(top: 8.0),
+                  child: _buildContacts()),
+            )
+          ],
+        ));
   }
 
   Widget _buildContacts() {
