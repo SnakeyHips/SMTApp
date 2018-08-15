@@ -10,6 +10,9 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  
+  final GlobalKey _menuKey = new GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,24 +32,21 @@ class HomePageState extends State<HomePage> {
                   title: Text("SMTApp"),
                   actions: <Widget>[
                     PopupMenuButton(
-                        itemBuilder: (context) => <PopupMenuItem<String>>[
-                              new PopupMenuItem<String>(
-                                child: new GestureDetector(
-                                    child: new Text("Email"),
-                                    onTap: () async {
-                                      await PageUtil.launchEmail("test");
-                                      Navigator.of(context).pop();
-                                    }),
-                              ),
-                              new PopupMenuItem<String>(
-                                child: new GestureDetector(
-                                    child: new Text("About"),
-                                    onTap: () async {
-                                      await PageUtil.aboutDialog(context);
-                                      Navigator.of(context).pop();
-                                    }),
-                              ),
-                            ]),
+                      key: _menuKey,
+                      itemBuilder: (context) => <PopupMenuItem>[
+                            new PopupMenuItem<String>(
+                                child: const Text("Email"), value: "Email"),
+                            new PopupMenuItem<String>(
+                                child: const Text("About"), value: "About"),
+                          ],
+                      onSelected: (result) async {
+                        if (result == "Email") {
+                          await PageUtil.launchEmail("test");
+                        } else if (result == "About") {
+                          await PageUtil.aboutDialog(context);
+                        }
+                      },
+                    ),
                   ]),
               body: TabBarView(
                 children: <Widget>[
