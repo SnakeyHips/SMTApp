@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/utils/page_util.dart';
+import 'package:SMTApp/utils/page_util.dart';
 
 class ExamplePage extends StatefulWidget {
   @override
