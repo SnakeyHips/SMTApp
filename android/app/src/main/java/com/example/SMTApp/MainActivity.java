@@ -1,4 +1,4 @@
-package com.example.myapp;
+package com.example.SMTApp;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
