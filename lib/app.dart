@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/viewmodels/contact_viewmodel.dart';
-import 'package:myapp/widgets/home_page.dart';
+import 'package:SMTApp/viewmodels/contact_viewmodel.dart';
+import 'package:SMTApp/widgets/home_page.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class SMTApp extends StatelessWidget {
