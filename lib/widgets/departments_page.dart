@@ -1,18 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:SMTApp/utils/page_util.dart';
-import 'package:SMTApp/widgets/departments/breakdowns_page.dart';
-import 'package:SMTApp/widgets/departments/business_continuity_page.dart';
-import 'package:SMTApp/widgets/departments/business_systems_page.dart';
-import 'package:SMTApp/widgets/departments/collections_page.dart';
-import 'package:SMTApp/widgets/departments/external_freezer_page.dart';
-import 'package:SMTApp/widgets/departments/facilities_page.dart';
-import 'package:SMTApp/widgets/departments/laboratories_page.dart';
-import 'package:SMTApp/widgets/departments/major_incident_page.dart';
-import 'package:SMTApp/widgets/departments/media_trust_page.dart';
-import 'package:SMTApp/widgets/departments/smt_oncall_page.dart';
-import 'package:SMTApp/widgets/departments/temperature_analysis_page.dart';
-import 'package:SMTApp/widgets/departments/transport_page.dart';
-import 'package:SMTApp/widgets/departments/wtail_page.dart';
+import 'package:SMTApp/widgets/departments/example_page.dart';
 
 class DepartmentsPage extends StatefulWidget {
   @override
