@@ -31,6 +31,7 @@ flutter:
     - assets/contacts.json
     - assets/tcv_flow_1.png
     - assets/tcv_flow_2.png
+    - assets/tcv_flow_3.png
     - assets/tcv_image_1.png
     - assets/tcv_image_2.png
     - assets/tcv_image_3.png
