@@ -8,9 +8,7 @@ class ActionCardsPage extends StatefulWidget {
 }
 
 class ActionCardsPageState extends State<ActionCardsPage> {
-  List<String> actioncards = [
-    "action card 1"
-  ];
+  List<String> actioncards = ["actioncard1"];
 
   @override
   Widget build(BuildContext context) {
@@ -25,27 +23,31 @@ class ActionCardsPageState extends State<ActionCardsPage> {
     return ListView.builder(
         itemCount: actioncards.length,
         itemBuilder: (BuildContext context, int index) {
-          return _buildRow(index);
+          return _buildRow(index, actioncards[index]);
         });
   }
 
-  Widget _buildRow(int index) {
-    return ListTile(
-        leading: new CircleAvatar(
-            backgroundColor: PageUtil.colors[index],
-            foregroundColor: Colors.white,
-            child: new Text(actioncards[index].substring(0, 1))),
-        title: new Text(
-          actioncards[index],
-          style: new TextStyle(fontSize: 18.0),
-        ),
-        onTap: () async {
-          switch (index) {
-            case 0:
-              _launchPage(index, new ExamplePage());
-              return;
-          }
-        });
+  Widget _buildRow(int index, String tag) {
+    return Hero(
+        tag: tag,
+        child: new Material(
+            color: Colors.white,
+            child: new ListTile(
+                leading: new CircleAvatar(
+                    backgroundColor: PageUtil.colors[index],
+                    foregroundColor: Colors.white,
+                    child: new Text(actioncards[index].substring(0, 1))),
+                title: new Text(
+                  actioncards[index],
+                  style: new TextStyle(fontSize: 18.0),
+                ),
+                onTap: () async {
+                  switch (index) {
+                    case 0:
+                      _launchPage(index, new OpLycanPage());
+                      return;
+                  }
+                })));
   }
 
   void _launchPage(int index, Widget page) {
