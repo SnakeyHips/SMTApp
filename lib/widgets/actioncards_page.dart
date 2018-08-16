@@ -52,7 +52,7 @@ class ActionCardsPageState extends State<ActionCardsPage> {
 
   void _launchPage(int index, Widget page) {
     Navigator.push(context,
-        new MaterialPageRoute<void>(builder: (BuildContext context) {
+        new MaterialPageRoute(builder: (BuildContext context) {
       return new Scaffold(
           appBar: new AppBar(
             title: new Text(actioncards[index]),
