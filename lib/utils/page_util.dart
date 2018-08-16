@@ -21,16 +21,15 @@ class PageUtil {
     Colors.blue,
     Colors.indigo,
     Colors.purple,
+    Colors.deepPurple
   ];
 
   static Future<Null> launchPhone(String number) async {
-    if (number != "---") {
-      String url = "tel:" + number;
-      if (await canLaunch(url)) {
-        await launch(url);
-      } else {
-        throw "Could not launch $url";
-      }
+    String url = "tel:" + number;
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw "Could not launch $url";
     }
   }
 
@@ -58,12 +57,18 @@ class PageUtil {
         context: context,
         builder: (BuildContext context) {
           return new SimpleDialog(
-            title: new Text(c.name, textAlign: TextAlign.center, style: new TextStyle(fontWeight: FontWeight.bold)),
+            title: new Text(c.name,
+                textAlign: TextAlign.center,
+                style: new TextStyle(fontWeight: FontWeight.bold)),
             contentPadding: new EdgeInsets.all(24.0),
             children: <Widget>[
               new Container(
                   margin: new EdgeInsets.only(bottom: 8.0),
-                  child: new Text(c.title, textAlign: TextAlign.center, style: new TextStyle(fontWeight: FontWeight.bold),)),
+                  child: new Text(
+                    c.title,
+                    textAlign: TextAlign.center,
+                    style: new TextStyle(fontWeight: FontWeight.bold),
+                  )),
               new Container(
                   margin: new EdgeInsets.only(bottom: 8.0),
                   child: new Divider()),
@@ -77,8 +82,10 @@ class PageUtil {
                             child: new Text(c.number,
                                 style: new TextStyle(color: Colors.red)),
                             onTap: () async {
-                              await launchPhone(c.number);
-                              await logDialog(context);
+                              if (c.number != "---") {
+                                await launchPhone(c.number);
+                                await logDialog(context);
+                              }
                             }),
                       ])),
               new Container(
@@ -91,8 +98,10 @@ class PageUtil {
                             child: new Text(c.altNumber,
                                 style: new TextStyle(color: Colors.red)),
                             onTap: () async {
-                              await launchPhone(c.altNumber);
-                              await logDialog(context);
+                              if (c.altNumber != "---") {
+                                await launchPhone(c.altNumber);
+                                await logDialog(context);
+                              }
                             }),
                       ])),
               new Container(
@@ -142,7 +151,7 @@ class PageUtil {
       builder: (BuildContext context) {
         return new AlertDialog(
           title: new Text("SMTApp - Flutter"),
-          content: new Text("Version 7.0 - 15/06/2018"),
+          content: new Text("Version 8.0 - 08/08/2018"),
           actions: <Widget>[
             new FlatButton(
               child: new Text('OK'),
