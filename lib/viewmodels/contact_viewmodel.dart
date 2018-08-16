@@ -1,10 +1,9 @@
 import 'dart:convert';
 import 'package:SMTApp/models/contact.dart';
-import 'package:scoped_model/scoped_model.dart';
 import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
 
-class ContactViewModel extends Model {
+class ContactViewModel {
 
   static List<Contact> contacts;
 
