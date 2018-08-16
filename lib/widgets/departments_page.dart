@@ -9,19 +9,8 @@ class DepartmentsPage extends StatefulWidget {
 
 class DepartmentsPageState extends State<DepartmentsPage> {
   List<String> departments = [
-    "SMT On Call",
-    "Breakdowns",
-    "Business Continuity & Emergency Planning",
-    "Business Systems - IT Support",
-    "Collections",
-    "External Commerical Plasma Freezer (Garage) - Alarm Activation",
-    "Facilities",
-    "Laboratories",
-    "Major Incident",
-    "Media & Trust Communications",
-    "Temperature Analysis Report (TCV) & Temperature Deviation",
-    "Transport",
-    "WTAIL"
+    "department1",
+    "department2"
   ];
 
   @override
