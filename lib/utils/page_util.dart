@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:SMTApp/models/contact.dart';
-import 'package:SMTApp/utils/zoomable_image.dart';
-import 'package:SMTApp/viewmodels/contact_viewmodel.dart';
+import 'package:smtapp/models/contact.dart';
+import 'package:smtapp/utils/zoomable_image.dart';
+import 'package:smtapp/viewmodels/contact_viewmodel.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PageUtil {
