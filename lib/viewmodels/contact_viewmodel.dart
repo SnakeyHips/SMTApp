@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:SMTApp/models/contact.dart';
+import 'package:smtapp/models/contact.dart';
 import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
 
