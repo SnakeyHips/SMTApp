@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:SMTApp/utils/page_util.dart';
-import 'package:SMTApp/widgets/actioncards_page.dart';
-import 'package:SMTApp/widgets/contacts_page.dart';
-import 'package:SMTApp/widgets/departments_page.dart';
+import 'package:smtapp/utils/page_util.dart';
+import 'package:smtapp/widgets/actioncards_page.dart';
+import 'package:smtapp/widgets/contacts_page.dart';
+import 'package:smtapp/widgets/departments_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
