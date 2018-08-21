@@ -16,7 +16,7 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: new ThemeData(primaryColor: Colors.red),
+        theme: new ThemeData(primaryColor: Color.fromRGBO(237, 28, 36, 1.0)),
         home: DefaultTabController(
           length: 3,
           child: Scaffold(
