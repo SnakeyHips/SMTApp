@@ -7,7 +7,7 @@ class SMTApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
             title: 'SMTApp',
-            theme: new ThemeData(primaryColor: Colors.red),
+            theme: new ThemeData(primaryColor: Color.fromRGBO(237, 28, 36, 1.0)),
             home: HomePage(),
           );
   }
