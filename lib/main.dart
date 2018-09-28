@@ -4,6 +4,5 @@ import 'package:smtapp/viewmodels/contact_viewmodel.dart';
 
 void main() async {
   await ContactViewModel.loadContacts();
-  MaterialPageRoute.debugEnableFadingRoutes = true;
   runApp(SMTApp());
 }
