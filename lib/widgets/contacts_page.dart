@@ -41,9 +41,9 @@ class ContactsPageState extends State<ContactsPage> {
                   style: new TextStyle(fontSize: 18.0, color: Colors.black),
                   decoration: InputDecoration(
                     prefixIcon: new Icon(Icons.search),
-                    suffixIcon: new GestureDetector(
-                      child: new Icon(Icons.close),
-                      onTap: () {
+                    suffixIcon: new IconButton(
+                      icon: new Icon(Icons.close),
+                      onPressed: () {
                         controller.clear();
                         FocusScope.of(context).requestFocus(new FocusNode());
                       },
