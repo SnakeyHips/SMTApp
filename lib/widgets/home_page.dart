@@ -15,17 +15,16 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        theme: new ThemeData(primaryColor: Color.fromRGBO(237, 28, 36, 1.0)),
-        home: DefaultTabController(
+    return Material(
+        child: DefaultTabController(
           length: 3,
           child: Scaffold(
               appBar: AppBar(
                   bottom: TabBar(
                     tabs: [
-                      Tab(icon: Icon(Icons.view_list)),
-                      Tab(icon: Icon(Icons.report_problem)),
-                      Tab(icon: Icon(Icons.contacts))
+                      Tab(text: "DEPARTMENTS"),
+                      Tab(text: "ACTION CARDS"),
+                      Tab(text: "CONTACTS")
                     ],
                     indicatorColor: Colors.white,
                   ),
@@ -38,13 +37,17 @@ class HomePageState extends State<HomePage> {
                                 child: const Text("Email"), value: "Email"),
                             new PopupMenuItem<String>(
                                 child: const Text("About"), value: "About"),
+                            new PopupMenuItem<String>(
+                                child: const Text("Weather"), value: "Weather"),
                           ],
                       onSelected: (result) async {
                         if (result == "Email") {
                           await PageUtil.launchEmail("test");
                         } else if (result == "About") {
                           await PageUtil.aboutDialog(context);
-                        }
+                        } else if (result == "Weather") {
+                          await PageUtil.weatherDialog(context);
+                        } 
                       },
                     ),
                   ]),
